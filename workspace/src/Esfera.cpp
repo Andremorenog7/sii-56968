@@ -11,6 +11,8 @@
 Esfera::Esfera()
 {
 	radio=0.5f;
+	centro.x =0;
+	centro.y=0;
 	velocidad.x=3;
 	velocidad.y=3;
 }
@@ -35,4 +37,6 @@ void Esfera::Dibuja()
 void Esfera::Mueve(float t)
 {
 
+ centro.x = centro.x + velocidad.x *t;
+ centro.y = centro.y + velocidad.y *t;
 }
